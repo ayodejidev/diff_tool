@@ -14,15 +14,17 @@ def compare_folders(folder1_path, folder2_path):
     Compare two folders recursively.
     """
     diff = difflib.Differ()
-    folder1_contents = set(os.listdir(folder1_path))
-    folder2_contents = set(os.listdir(folder2_path))
+    folder1_contents = sorted(os.listdir(folder1_path))
+    folder2_contents = sorted(os.listdir(folder2_path))
 
-    folder1_only = folder1_contents - folder2_contents
-    folder2_only = folder2_contents - folder1_contents
+    folder1_only = set(folder1_contents) - set(folder2_contents)
+    folder2_only = set(folder2_contents) - set(folder1_contents)
 
     diff_result = list(diff.compare(folder1_contents, folder2_contents))
 
     return folder1_only, folder2_only, diff_result
+
+
 
 def main():
     input_path1 = input("Enter the path of the first file or folder: ")
