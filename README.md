@@ -1,4 +1,4 @@
-# Folder and File Comparator
+# Diff Tool
 
 This Python script allows you to compare the contents of either two files or two folders and output the differences in a readable format.
 
