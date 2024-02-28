@@ -13,7 +13,7 @@ This Python script allows you to compare the contents of either two files or two
 3. Navigate to the directory where the script is located.
 4. Run the script by executing the following command:
    ```bash
-   python folder_file_comparator.py
+   python diff_tool.py
    ```
 5. Follow the prompts to enter the paths of the files or folders you want to compare.
 6. The script will generate a diff output file named `diff_output.txt` containing the differences between the files or folders.
